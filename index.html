@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>황해승 — 게임 서버·클라이언트 개발자</title>
+  <meta name="description" content="황해승 포트폴리오 — 유니티 클라이언트와 게임 서버를 모두 개발하며 초기 기획부터 출시·라이브 서비스까지 경험한 개발자." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">황해승</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#career">경력</a>
+        <a href="#contact">연락처</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap">
+      <p class="eyebrow">게임 서버 · 클라이언트 개발자</p>
+      <h1>황해승</h1>
+      <p class="lede">
+        유니티 클라이언트와 게임 서버를 모두 개발하며, 초기 기획부터
+        출시와 라이브 서비스 운영까지 게임의 전체 라이프사이클을
+        경험했습니다. 고성능 서버 아키텍처 설계와 인프라·CI/CD 자동화를
+        중심으로 일합니다.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+        <a class="btn" href="https://github.com/dakgg">GitHub</a>
+        <a class="btn" href="https://gist.github.com/dakgg/388e7dc3494738a454500db82e89600d">코드 샘플</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="wrap section">
+      <h2>소개</h2>
+      <p>
+        안녕하세요, 개발자 황해승입니다. 수집형 RPG부터 캐주얼 슈팅까지
+        여러 라이브 게임의 서버를 설계·구축하고 운영해 왔습니다. 클라이언트
+        개발부터 서버 아키텍처, 인프라 구성, 운영툴 제작까지 폭넓게 다루며,
+        기획팀·QA팀·퍼블리셔와 협업해 실제 서비스를 안정적으로 출시하는 데
+        집중합니다. 대용량 트래픽을 다루는 분산 아키텍처, 데이터베이스 샤딩,
+        Redis 캐싱, 컨테이너 기반 배포 자동화에 강점이 있습니다.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="wrap section">
+      <h2>기술</h2>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h3>Language</h3>
+          <p class="tags"><span>C#</span><span>C++</span><span>Python</span><span>JavaScript</span><span>Go</span></p>
+        </div>
+        <div class="skill-card">
+          <h3>Backend Framework</h3>
+          <p class="tags"><span>ASP.NET</span><span>MagicOnion</span><span>gRPC</span><span>Flask</span></p>
+        </div>
+        <div class="skill-card">
+          <h3>DB / ORM</h3>
+          <p class="tags"><span>MySQL</span><span>Redis</span><span>EntityFramework</span></p>
+        </div>
+        <div class="skill-card">
+          <h3>Game Engine</h3>
+          <p class="tags"><span>Unity</span><span>DirectX</span></p>
+        </div>
+        <div class="skill-card">
+          <h3>DevOps / Infra</h3>
+          <p class="tags"><span>Docker</span><span>AWS ECS</span><span>Jenkins</span><span>Gitlab-Runner</span></p>
+        </div>
+        <div class="skill-card">
+          <h3>Collaboration</h3>
+          <p class="tags"><span>Git</span><span>Jira</span><span>Trello</span><span>Slack</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="wrap section">
+      <h2>프로젝트</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Backpack Chef</h3>
+          <p class="meta">2026.06 ~ 현재 · 수집형 &amp; 백팩 · 서버 프로그래머</p>
+          <p>
+            라이브 서비스 오픈을 위한 인프라 환경을 구축하고 안정적인 운영이
+            가능하도록 세팅했습니다. 대규모 트래픽을 가정한 스트레스 테스트로
+            서버 성능과 안정성을 검증하고 병목 구간을 사전에 개선했으며,
+            기본 서버 콘텐츠와 모니터링용 운영툴을 개발해 라이브 운영 기반을
+            마련했습니다.
+          </p>
+          <p class="tags"><span>C#</span><span>Unity</span><span>MySQL</span><span>Redis</span><span>JavaScript</span></p>
+        </article>
+
+        <article class="project-card">
+          <h3>페어리테일 퀘스트</h3>
+          <p class="meta">2025.09 ~ 현재 · 캐주얼 슈팅 · 서버 프로그래머 · 퍼블리싱 라인게임즈</p>
+          <p>
+            C# WebSocket 기반 서버와 JavaScript 운영툴을 담당해 소프트런칭
+            이전부터 글로벌 런칭까지 참여했습니다. 길드 콘텐츠 서버 로직을
+            설계하고, 분리 운영되던 다중 서버의 길드 데이터와 유저 랭킹을 하나로
+            통합했습니다. 운영툴은 Node.js(Express)·Vue.js로 구축하고 Redis
+            실시간 랭킹과 Cron 스케줄링, 기획 데이터 검증 시스템을 더했습니다.
+          </p>
+          <p class="tags"><span>C#</span><span>WebSocket</span><span>Redis</span><span>MySQL</span><span>Node.js</span><span>Vue.js</span></p>
+        </article>
+
+        <article class="project-card">
+          <h3>라테시아</h3>
+          <p class="meta">2021.03 ~ 2025.03 · 수집형 RPG · 서버 리드</p>
+          <p>
+            초기 구축부터 글로벌 출시 전까지 서버 전체 라이프사이클을
+            리드했습니다. ASP.NET Core·MagicOnion(gRPC)·MySQL·Redis로 고성능
+            서버 아키텍처를 설계하고, Docker·Gitlab-Runner로 CI/CD를
+            자동화했습니다. Blazor 운영툴, Git Submodule 기반 기획 데이터
+            파이프라인, Serilog·S3·Athena 로깅 시스템을 구축했습니다. 인게임에서는
+            확장 가능한 인터페이스 기반의 섬 콘텐츠와 전용 시뮬레이션 툴을,
+            아웃게임에서는 스킬 트리 성장·상점·우편·퀘스트·업적 루프를 구현했습니다.
+          </p>
+          <p class="tags"><span>ASP.NET Core</span><span>MagicOnion</span><span>gRPC</span><span>EntityFramework</span><span>Docker</span><span>Blazor</span><span>Unity</span></p>
+        </article>
+
+        <article class="project-card">
+          <h3>몬스터 슈퍼리그</h3>
+          <p class="meta">2019.07 ~ 2020.02, 2025.04 ~ 2025.08 · 수집형 RPG · 풀스택</p>
+          <p>
+            Unity 클라이언트와 Python(Flask/Django) 백엔드를 아우르는 풀스택
+            엔지니어로 전체 라이프사이클에 기여했습니다. 멀티 서버 분산
+            아키텍처에서 평균 20k RPM의 중대형 트래픽을 관리하고, DB 샤딩과
+            Redis 캐싱으로 대용량 데이터를 처리했습니다. AWS ECS 오케스트레이션과
+            Jenkins CI/CD로 배포를 간소화했으며, Protobuf 통신 프로토콜과
+            SQLAlchemy 데이터 접근 레이어를 설계했습니다.
+          </p>
+          <p class="tags"><span>Unity</span><span>Python</span><span>Flask</span><span>Protobuf</span><span>MySQL</span><span>AWS ECS</span></p>
+        </article>
+
+        <article class="project-card">
+          <h3>캐주얼 게임 6종</h3>
+          <p class="meta">2020.03 ~ 2021.03 · 캐주얼 · 클라이언트</p>
+          <p>
+            캐주얼 프로젝트 6종을 개발·유지보수했습니다. 광고 모듈을 Google
+            Ads에서 IronSource로 전환하고, Gitlab-Runner로 빌드 자동화를
+            구축했으며, UniRx 기반 반응형 프로그래밍으로 클라이언트를
+            개발했습니다.
+          </p>
+          <p class="tags"><span>Unity</span><span>C#</span><span>UniRx</span><span>IronSource</span></p>
+        </article>
+
+        <article class="project-card">
+          <h3>NieR: Automata (모작)</h3>
+          <p class="meta">주신게임아카데미 졸업작품 · 클라이언트</p>
+          <p>
+            C++와 DirectX 9로 제작한 졸업 작품입니다. 게임 엔진 기초와 렌더링
+            파이프라인을 직접 다루며 그래픽스·엔진 구조를 학습했습니다.
+          </p>
+          <p class="tags"><span>C++</span><span>DirectX 9</span></p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Career -->
+    <section id="career" class="wrap section">
+      <h2>경력 <span class="muted-inline">(총 7년 1개월)</span></h2>
+      <ol class="timeline">
+        <li>
+          <div class="tl-period">2025.09 ~ 현재</div>
+          <div class="tl-body"><strong>와이즐리앤코</strong><br>게임 서버 개발</div>
+        </li>
+        <li>
+          <div class="tl-period">2020.03 ~ 2025.08</div>
+          <div class="tl-body"><strong>스마트스터디게임즈</strong><br>서버·클라이언트 개발, 서버 리드</div>
+        </li>
+        <li>
+          <div class="tl-period">2019.07 ~ 2020.02</div>
+          <div class="tl-body"><strong>스마트스터디 (더핑크퐁컴퍼니)</strong><br>게임 개발</div>
+        </li>
+      </ol>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>학력</h3>
+          <p><strong>홍익대학교 세종캠퍼스</strong> 게임소프트웨어 전공<br>
+          2011.03 ~ 2016.02 · 학점 3.37 / 4.5</p>
+        </div>
+        <div class="info-card">
+          <h3>병역</h3>
+          <p>육군 만기 제대<br>2012.03 ~ 2013.12</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap section">
+      <h2>연락처</h2>
+      <p>연락을 원하시면 아래로 편하게 연락 주세요.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:hhs19922@gmail.com">이메일</a>
+        <a class="btn" href="https://github.com/dakgg">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/haeseung">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> 황해승. 순수 HTML &amp; CSS로 제작.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
