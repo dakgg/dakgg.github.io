@@ -107,7 +107,7 @@
         </div>
         <div class="skill-card">
           <h3>DevOps / Infra</h3>
-          <p class="tags"><span>Docker</span><span>AWS ECS</span><span>Jenkins</span><span>Gitlab-Runner</span></p>
+          <p class="tags"><span>Docker</span><span>AWS</span><span>Azure</span><span>Jenkins</span><span>Gitlab-Runner</span><span>Github-Action</span></p>
         </div>
         <div class="skill-card">
           <h3>Collaboration</h3>
@@ -191,7 +191,7 @@
           <div class="result-card"><div class="big">5+</div><div class="cap">인프라·로깅·데이터 파이프라인 시스템 구축</div></div>
         </div>
         <div class="video-embed">
-          <iframe src="https://www.youtube-nocookie.com/embed/8ymhPScY9jE" title="라테시아 플레이 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/8ymhPScY9jE" title="라테시아 플레이 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!-- 스크린샷을 추가하려면 아래 주석을 풀고 images/ 폴더의 파일을 연결하세요.
         <div class="media-grid">
@@ -265,7 +265,7 @@
         <h3 class="detail-title">NieR: Automata 모작</h3>
         <p class="detail-meta">주신게임아카데미 졸업작품 · 클라이언트</p>
         <div class="video-embed">
-          <iframe src="https://www.youtube-nocookie.com/embed/4mXq9ICzFoQ" title="NieR: Automata 모작 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/4mXq9ICzFoQ" title="NieR: Automata 모작 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p class="proj-body">C++와 DirectX 9로 제작한 졸업 작품입니다. 게임 엔진 기초와 렌더링 파이프라인을 직접 다루며 그래픽스·엔진 구조를 학습했습니다.</p>
         <p class="tags"><span>C++</span><span>DirectX 9</span></p>
@@ -320,11 +320,13 @@
         var clone = detail.cloneNode(true);
         clone.removeAttribute('id');
         clone.hidden = false;
+        // show the modal before injecting: an iframe inserted into a
+        // display:none subtree never starts loading
+        modal.hidden = false;
         body.appendChild(clone);
         // link modal aria-labelledby to the cloned title
         titleEl = clone.querySelector('.detail-title');
         if (titleEl) titleEl.id = 'modal-title';
-        modal.hidden = false;
         document.body.style.overflow = 'hidden';
         modal.querySelector('.modal-close').focus();
       }
