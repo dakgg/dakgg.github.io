@@ -114,26 +114,86 @@ code {
 .site-header nav a:hover { color: var(--text); text-decoration: none; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 80px 24px 56px; }
+.hero { padding: clamp(64px, 10vh, 104px) 24px 56px; }
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent);
-  margin: 0 0 12px;
-}
-.hero h1 {
-  font-size: clamp(2.6rem, 8vw, 4.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
   margin: 0 0 20px;
 }
+/* the headline is the romanized name — Latin caps read as a wordmark, so the
+   Korean name can sit below at label size instead of competing */
+.hero h1 {
+  font-size: clamp(2.4rem, 8vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+}
+.hero h1 .accent { color: var(--accent); }
+
+.ko-name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--text-muted);
+  margin: 0 0 28px;
+}
+.exp-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
 .lede {
   font-size: clamp(1.05rem, 2.5vw, 1.3rem);
   color: var(--text-muted);
   max-width: 42ch;
-  margin: 0 0 32px;
+  margin: 0 0 36px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.meta-label {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.meta-val { font-size: 0.95rem; }
+
+.scroll-hint {
+  width: fit-content;
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+.scroll-hint .arrow { animation: hint-bounce 1.8s infinite; }
+@keyframes hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint .arrow { animation: none; }
 }
 
 /* ---------- Buttons ---------- */

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>황해승 — 게임 서버·클라이언트 개발자</title>
+  <title>황해승 포트폴리오</title>
   <meta name="description" content="황해승 포트폴리오 — 유니티 클라이언트와 게임 서버를 모두 개발하며 초기 기획부터 출시·라이브 서비스까지 경험한 개발자." />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,7 +12,7 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/">황해승</a>
+      <!-- <a class="brand" href="/">황해승</a> -->
       <nav aria-label="주요 메뉴">
         <a href="#about">소개</a>
         <a href="#career">경력</a>
@@ -26,19 +26,24 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero wrap">
-      <p class="eyebrow">게임 서버 · 클라이언트 개발자</p>
-      <h1>황해승</h1>
+      <p class="eyebrow">GAME SERVER · CLIENT DEVELOPER</p>
+      <h1>HWANG <span class="accent">HAESEUNG</span></h1>
+      <p class="ko-name">황해승<span class="exp-badge">경력 7년 1개월</span></p>
       <p class="lede">
-        유니티 클라이언트와 게임 서버를 모두 개발하며, 초기 기획부터
-        출시와 라이브 서비스 운영까지 게임의 전체 라이프사이클을
-        경험했습니다. 고성능 서버 아키텍처 설계와 인프라·CI/CD 자동화를
-        중심으로 일합니다.
+        초기 기획부터 출시와 라이브 서비스 운영까지 게임의 전체 라이프사이클을 경험했습니다.
       </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
-        <a class="btn" href="https://github.com/dakgg">GitHub</a>
-        <a class="btn" href="https://gist.github.com/dakgg/388e7dc3494738a454500db82e89600d">코드 샘플</a>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <div class="meta-label">Current</div>
+          <div class="meta-val">와이즐리앤코 · 게임 서버 개발</div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+          <a class="btn" href="https://github.com/dakgg">GitHub</a>
+          <a class="btn" href="https://gist.github.com/dakgg/388e7dc3494738a454500db82e89600d">코드 샘플</a>
+        </div>
       </div>
+      <div class="scroll-hint" aria-hidden="true">SCROLL<span class="arrow">↓</span></div>
     </section>
 
     <!-- About -->
@@ -47,10 +52,9 @@
       <p>
         안녕하세요, 개발자 황해승입니다. 수집형 RPG부터 캐주얼 슈팅까지
         여러 라이브 게임의 서버를 설계·구축하고 운영해 왔습니다. 클라이언트
-        개발부터 서버 아키텍처, 인프라 구성, 운영툴 제작까지 폭넓게 다루며,
+        개발부터 서버 아키텍처, 인프라 구성, 운영툴 제작까지 폭넓게 다룹니다.
         기획팀·QA팀·퍼블리셔와 협업해 실제 서비스를 안정적으로 출시하는 데
-        집중합니다. 대용량 트래픽을 다루는 분산 아키텍처, 데이터베이스 샤딩,
-        Redis 캐싱, 컨테이너 기반 배포 자동화에 강점이 있습니다.
+        집중합니다.
       </p>
     </section>
 
@@ -200,8 +204,8 @@
         </div>
         -->
         <div class="story">
-          <div class="story-cell"><div class="st">PROBLEM</div><p>신규 IP 서버를 처음부터 세우면서, 기획팀이 코드에 손대지 않고도 게임 데이터를 다룰 수 있는 환경이 필요했습니다.</p></div>
-          <div class="story-cell"><div class="st">SOLUTION</div><p>ASP.NET Core·MagicOnion(gRPC)·MySQL·Redis로 서버 아키텍처를 설계하고, Docker·Gitlab-Runner로 CI/CD를 자동화했습니다. Blazor 운영툴과 Git Submodule 기반 데이터 파이프라인, Serilog·S3·Athena 로깅을 붙였습니다.</p></div>
+          <div class="story-cell"><div class="st">PROBLEM</div><p>신규 IP 서버를 처음부터 세우면서 기획팀이 코드에 손대지 않고도 게임 데이터를 다룰 수 있는 환경이 필요했습니다.</p></div>
+          <div class="story-cell"><div class="st">SOLUTION</div><p>ASP.NET Core·MagicOnion(gRPC)·MySQL·Redis로 서버 아키텍처를 설계하고 Docker·Gitlab-Runner로 CI/CD를 자동화했습니다. Blazor 운영툴과 Git Submodule 기반 데이터 파이프라인, Serilog·S3·Athena 로깅을 붙였습니다.</p></div>
           <div class="story-cell"><div class="st">IMPACT</div><p>인게임에서는 확장 가능한 인터페이스로 섬 콘텐츠와 전용 시뮬레이션 툴을, 아웃게임에서는 스킬 트리 성장·상점·우편·퀘스트·업적 루프까지 구현하며 서버 전체를 리드했습니다.</p></div>
         </div>
         <p class="tags"><span>ASP.NET Core</span><span>MagicOnion</span><span>gRPC</span><span>EntityFramework</span><span>Docker</span><span>Blazor</span><span>Redis</span></p>
@@ -222,7 +226,7 @@
         </div>
         <div class="story">
           <div class="story-cell"><div class="st">PROBLEM</div><p>이미 서비스 중인 라이브 게임에서 대용량 데이터와 중대형 트래픽을 흔들림 없이 처리해야 했습니다.</p></div>
-          <div class="story-cell"><div class="st">SOLUTION</div><p>멀티 서버 분산 아키텍처에 DB 샤딩과 Redis 캐싱을 적용하고, AWS ECS와 Jenkins로 배포를 간소화했습니다. 통신은 Protobuf로, 데이터 접근은 SQLAlchemy로 설계했습니다.</p></div>
+          <div class="story-cell"><div class="st">SOLUTION</div><p>멀티 서버 분산 아키텍처에 DB 샤딩과 Redis 캐싱을 적용하고 AWS ECS와 Jenkins로 배포를 간소화했습니다. 통신은 Protobuf로, 데이터 접근은 SQLAlchemy로 설계했습니다.</p></div>
           <div class="story-cell"><div class="st">IMPACT</div><p>평균 20k RPM 트래픽을 안정적으로 관리하며 클라이언트부터 백엔드까지 전체 라이프사이클에 기여했습니다.</p></div>
         </div>
         <p class="tags"><span>Unity</span><span>Python</span><span>Flask</span><span>Protobuf</span><span>MySQL</span><span>AWS ECS</span></p>
@@ -234,7 +238,7 @@
         <p class="detail-meta">캐주얼 슈팅 · 서버 프로그래머 · 라인게임즈 퍼블리싱 · 2025.09 ~ 현재</p>
         <div class="story">
           <div class="story-cell"><div class="st">PROBLEM</div><p>서버가 분리 운영되면서 길드 데이터와 유저 랭킹이 서버마다 흩어져 있었습니다.</p></div>
-          <div class="story-cell"><div class="st">SOLUTION</div><p>C# WebSocket 서버로 길드 콘텐츠 로직을 설계하고, 다중 서버의 길드 데이터와 랭킹을 하나로 통합했습니다. 운영툴은 Node.js(Express)·Vue.js로 만들고 Redis 실시간 랭킹과 Cron 스케줄링, 기획 데이터 검증을 더했습니다.</p></div>
+          <div class="story-cell"><div class="st">SOLUTION</div><p>C# WebSocket 서버로 길드 콘텐츠 로직을 설계하고 다중 서버의 길드 데이터와 랭킹을 하나로 통합했습니다. 운영툴은 Node.js(Express)·Vue.js로 만들고 Redis 실시간 랭킹과 Cron 스케줄링, 기획 데이터 검증을 더했습니다.</p></div>
           <div class="story-cell"><div class="st">IMPACT</div><p>소프트런칭 이전부터 참여해 글로벌 런칭까지 출시 전 과정을 담당했습니다.</p></div>
         </div>
         <p class="tags"><span>C#</span><span>WebSocket</span><span>Redis</span><span>MySQL</span><span>Node.js</span><span>Vue.js</span></p>
@@ -246,7 +250,7 @@
         <p class="detail-meta">수집형 &amp; 백팩 · 서버 프로그래머 · 2026.06 ~ 현재</p>
         <div class="story">
           <div class="story-cell"><div class="st">PROBLEM</div><p>라이브 오픈을 앞두고 대규모 트래픽을 견딜 인프라와 운영 기반이 아직 없었습니다.</p></div>
-          <div class="story-cell"><div class="st">SOLUTION</div><p>서비스 인프라를 구축하고, 대규모 트래픽을 가정한 스트레스 테스트로 성능과 안정성을 검증했습니다. 기본 서버 콘텐츠와 모니터링용 운영툴도 함께 개발했습니다.</p></div>
+          <div class="story-cell"><div class="st">SOLUTION</div><p>서비스 인프라를 구축하고 대규모 트래픽을 가정한 스트레스 테스트로 성능과 안정성을 검증했습니다. 기본 서버 콘텐츠와 모니터링용 운영툴도 함께 개발했습니다.</p></div>
           <div class="story-cell"><div class="st">IMPACT</div><p>병목 구간을 미리 찾아 개선하며 안정적인 라이브 운영 기반을 마련했습니다.</p></div>
         </div>
         <p class="tags"><span>C#</span><span>Unity</span><span>MySQL</span><span>Redis</span><span>JavaScript</span></p>
@@ -256,7 +260,7 @@
         <div class="proj-num">05 — CASUAL GAMES</div>
         <h3 class="detail-title">캐주얼 게임 6종</h3>
         <p class="detail-meta">캐주얼 · 클라이언트 · 2020.03 ~ 2021.03</p>
-        <p class="proj-body">캐주얼 프로젝트 6종을 개발·유지보수했습니다. 광고 모듈을 Google Ads에서 IronSource로 전환하고, Gitlab-Runner로 빌드 자동화를 구축했으며, UniRx 기반 반응형 프로그래밍으로 클라이언트를 개발했습니다.</p>
+        <p class="proj-body">캐주얼 프로젝트 6종을 개발·유지보수했습니다. 광고 모듈을 Google Ads에서 IronSource로 전환하고 Gitlab-Runner로 빌드 자동화를 구축했습니다. 클라이언트는 UniRx 기반 반응형 프로그래밍으로 개발했습니다.</p>
         <p class="tags"><span>Unity</span><span>C#</span><span>UniRx</span><span>IronSource</span><span>Google Ads</span></p>
       </div>
 
