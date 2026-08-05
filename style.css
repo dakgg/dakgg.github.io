@@ -422,34 +422,46 @@ code {
   max-width: 28ch;
 }
 
-.story {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 22px;
-}
-.story-cell {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 20px;
-}
-.story-cell .st {
+/* Work list — replaces the old PROBLEM/SOLUTION/IMPACT .story grid.
+   .work-group is optional; a .proj-detail may hold a bare .work-list instead. */
+.work { margin-bottom: 22px; }
+.work-group + .work-group { margin-top: 20px; }
+.work-label {
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   color: var(--accent);
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
-.story-cell p {
-  font-size: 0.86rem;
-  color: var(--text-muted);
-  line-height: 1.65;
+.work-list {
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+.work-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.work-list li + li { margin-top: 8px; }
+.work-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.68em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.work-list strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 @media (max-width: 720px) {
-  .story { grid-template-columns: 1fr; }
   .result-row { gap: 28px; }
   .media-grid { grid-template-columns: 1fr; }
 }

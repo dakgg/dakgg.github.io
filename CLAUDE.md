@@ -38,7 +38,11 @@ Accessibility wiring that is easy to break when editing: the clone's `.detail-ti
 
 ### Detail block vocabulary
 
-Detail blocks are composed from a fixed set of optional pieces, in this order: `.result-row` (stat cards with `.big`/`.cap`), `.video-embed` (16:9 YouTube iframe — use `youtube-nocookie.com/embed/`), `.media-grid`, `.story` (three `.story-cell`s labelled PROBLEM / SOLUTION / IMPACT), `.proj-body` (prose alternative to `.story`), `.tags`, `.detail-links`. Use `.story` for narrative projects and `.proj-body` for short ones — see `#detail-p5` and `#detail-p6` for the short form.
+Detail blocks are composed from a fixed set of optional pieces, in this order: `.result-row` (stat cards with `.big`/`.cap`), `.video-embed` (16:9 YouTube iframe — use `youtube-nocookie.com/embed/`), `.media-grid`, `.work` (the work-performed list), `.proj-body` (prose alternative to `.work`), `.tags`, `.detail-links`. Use `.work` for substantial projects and `.proj-body` for short ones — see `#detail-p5` and `#detail-p6` for the short form.
+
+Inside `.work`, items live in a `ul.work-list` (custom accent bullets; `<strong>` promotes a lead-in phrase to full-contrast text). Wrap lists in `.work-group` — each with a `.work-label` heading — when a project splits its work into areas; `#detail-p4` shows the ungrouped form, a bare `.work-list`. Content mirrors the "수행 업무" sections of the Notion portfolio at `faceted-candle-946.notion.site/0d3a681ea9df4320af3876482892f732`, so edit there first and port across.
+
+A prior revision used `.story` (three `.story-cell`s labelled PROBLEM / SOLUTION / IMPACT). That vocabulary is gone from both files — don't reintroduce it.
 
 ### Styling
 
