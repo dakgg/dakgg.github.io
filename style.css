@@ -237,28 +237,57 @@ code {
 .section > p:first-of-type { color: var(--text); }
 
 /* ---------- Grids ---------- */
-.skill-grid, .project-grid {
+/* Skills read as an aligned label rail rather than scattered cards, so the whole
+   stack can be scanned down the left edge in one pass. */
+.skill-rows {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.skill-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 20px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.skill-cat {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.skill-row .tags { margin-top: 0 !important; }
+
+@media (max-width: 560px) {
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px 0;
+  }
+}
+
+.project-grid {
   display: grid;
   gap: 18px;
   margin-top: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-.skill-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.project-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
-.skill-card, .project-card {
+.project-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px 24px;
   box-shadow: var(--shadow);
 }
-.skill-card h3, .project-card h3 {
+.project-card h3 {
   margin: 0 0 12px;
   font-size: 1.1rem;
   letter-spacing: -0.01em;
 }
-.skill-card ul { margin: 0; padding-left: 18px; color: var(--text-muted); }
-.skill-card li { margin: 4px 0; }
 .project-card p { margin: 0 0 14px; color: var(--text-muted); }
 .project-card .meta {
   margin: -6px 0 14px;
@@ -375,6 +404,18 @@ code {
 }
 .media { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg-alt); }
 .media img { width: 100%; display: block; }
+
+/* Screenshot variant: fixed-ratio cells so portrait and landscape captures sit
+   in one even grid. `contain` letterboxes rather than crops. The doubled class
+   outweighs the plain `.media-grid` 1-column rule that the 720px breakpoint
+   applies later in this file. */
+.media-grid.media-grid-shots { grid-template-columns: repeat(3, 1fr); }
+.media-grid-shots .media { aspect-ratio: 3 / 4; }
+.media-grid-shots .media img { height: 100%; object-fit: contain; }
+
+@media (max-width: 560px) {
+  .media-grid.media-grid-shots { grid-template-columns: repeat(2, 1fr); }
+}
 .detail-links {
   display: flex;
   flex-wrap: wrap;

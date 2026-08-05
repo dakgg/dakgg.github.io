@@ -92,29 +92,29 @@
     <!-- Skills -->
     <section id="skills" class="wrap section">
       <h2>기술</h2>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <h3>Language</h3>
+      <div class="skill-rows">
+        <div class="skill-row">
+          <h3 class="skill-cat">Language</h3>
           <p class="tags"><span>C#</span><span>C++</span><span>Python</span><span>JavaScript</span><span>Go</span></p>
         </div>
-        <div class="skill-card">
-          <h3>Backend Framework</h3>
+        <div class="skill-row">
+          <h3 class="skill-cat">Backend Framework</h3>
           <p class="tags"><span>ASP.NET</span><span>MagicOnion</span><span>gRPC</span><span>Flask</span></p>
         </div>
-        <div class="skill-card">
-          <h3>DB / ORM</h3>
+        <div class="skill-row">
+          <h3 class="skill-cat">DB / ORM</h3>
           <p class="tags"><span>MySQL</span><span>Redis</span><span>EntityFramework</span></p>
         </div>
-        <div class="skill-card">
-          <h3>Game Engine</h3>
+        <div class="skill-row">
+          <h3 class="skill-cat">Game Engine</h3>
           <p class="tags"><span>Unity</span><span>DirectX</span></p>
         </div>
-        <div class="skill-card">
-          <h3>DevOps / Infra</h3>
+        <div class="skill-row">
+          <h3 class="skill-cat">DevOps / Infra</h3>
           <p class="tags"><span>Docker</span><span>AWS</span><span>Azure</span><span>Jenkins</span><span>Gitlab-Runner</span><span>Github-Action</span></p>
         </div>
-        <div class="skill-card">
-          <h3>Collaboration</h3>
+        <div class="skill-row">
+          <h3 class="skill-cat">Collaboration</h3>
           <p class="tags"><span>Git</span><span>Jira</span><span>Trello</span><span>Slack</span></p>
         </div>
       </div>
@@ -190,10 +190,6 @@
         <div class="proj-num">01 — LATTESSIA</div>
         <h3 class="detail-title">라테시아</h3>
         <p class="detail-meta">수집형 RPG · 서버 리드 · 2021.03 ~ 2025.03</p>
-        <div class="result-row">
-          <div class="result-card"><div class="big">4년</div><div class="cap">서버 리드 · 초기 구축 → 글로벌 출시 준비</div></div>
-          <div class="result-card"><div class="big">5+</div><div class="cap">인프라·로깅·데이터 파이프라인 시스템 구축</div></div>
-        </div>
         <div class="video-embed">
           <iframe src="https://www.youtube-nocookie.com/embed/8ymhPScY9jE" title="라테시아 플레이 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -242,9 +238,8 @@
         <div class="proj-num">02 — MONSTER SUPER LEAGUE</div>
         <h3 class="detail-title">몬스터 슈퍼리그</h3>
         <p class="detail-meta">수집형 RPG · 풀스택 · 2019.07 ~ 2020.02, 2025.04 ~ 2025.08</p>
-        <div class="result-row">
-          <div class="result-card"><div class="big">20k RPM</div><div class="cap">멀티 서버 분산 아키텍처 평균 트래픽</div></div>
-          <div class="result-card"><div class="big">풀스택</div><div class="cap">Unity 클라이언트 + Python 백엔드</div></div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/Ne47hkcCMaY" title="몬스터 슈퍼리그 플레이 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="work">
           <div class="work-group">
@@ -270,6 +265,9 @@
           </div>
         </div>
         <p class="tags"><span>Unity</span><span>Python</span><span>Flask</span><span>Protobuf</span><span>MySQL</span><span>AWS ECS</span></p>
+        <div class="detail-links">
+          <a href="https://youtu.be/Ne47hkcCMaY" target="_blank" rel="noopener">▶ 플레이 영상</a>
+        </div>
       </div>
 
       <div class="proj-detail" id="detail-p3">
@@ -337,6 +335,14 @@
         <div class="proj-num">05 — CASUAL GAMES</div>
         <h3 class="detail-title">캐주얼 게임 6종</h3>
         <p class="detail-meta">캐주얼 · 클라이언트 · 2020.03 ~ 2021.03</p>
+        <div class="media-grid media-grid-shots">
+          <div class="media"><img src="image/casual1.webp" alt="원형 링을 도는 물고기를 조작하는 세로 화면 캐주얼 게임" loading="lazy"></div>
+          <div class="media"><img src="image/casual3.webp" alt="픽셀 아트로 표현된 바닷속을 헤엄치는 아기상어 아케이드 게임" loading="lazy"></div>
+          <div class="media"><img src="image/casual4.webp" alt="물방울에 갇힌 아기상어가 성게 장애물을 피하는 게임" loading="lazy"></div>
+          <div class="media"><img src="image/casual5.webp" alt="아기상어가 기둥 사이를 지나며 별 아이템을 먹는 게임" loading="lazy"></div>
+          <div class="media"><img src="image/casual2.webp" alt="사자 그림 두 장의 다른 부분을 찾는 틀린 그림 찾기 게임" loading="lazy"></div>
+          <div class="media"><img src="image/casual6.webp" alt="아기상어를 발사해 비행 거리를 겨루는 가로 화면 게임" loading="lazy"></div>
+        </div>
         <p class="proj-body">캐주얼 프로젝트 6종을 개발·유지보수했습니다. 광고 모듈을 Google Ads에서 IronSource로 전환하고 Gitlab-Runner로 빌드 자동화를 구축했습니다. 클라이언트는 UniRx 기반 반응형 프로그래밍으로 개발했습니다.</p>
         <p class="tags"><span>Unity</span><span>C#</span><span>UniRx</span><span>IronSource</span><span>Google Ads</span></p>
       </div>
@@ -370,9 +376,9 @@
     <section id="contact" class="wrap section">
       <h2>연락처</h2>
       <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:hhs19922@gmail.com">이메일</a>
-        <a class="btn" href="https://github.com/dakgg">GitHub</a>
+        <a class="btn btn-primary" href="mailto:hhs19922@gmail.com">Email</a>
         <a class="btn" href="https://www.linkedin.com/in/haeseung">LinkedIn</a>
+        <a class="btn" href="https://www.instagram.com/soooooooooong">Instagram</a>
       </div>
     </section>
   </main>
