@@ -18,6 +18,7 @@
         <a href="#career">경력</a>
         <a href="#skills">기술</a>
         <a href="#projects">프로젝트</a>
+        <a href="#oss">개인 프로젝트</a>
         <a href="#contact">연락처</a>
       </nav>
     </div>
@@ -149,7 +150,7 @@
           <h3 class="pc-title">페어리테일 퀘스트</h3>
           <p class="pc-meta">캐주얼 슈팅 · 서버 · 라인게임즈</p>
           <p class="pc-period">2025.09 ~ 2026.05</p>
-          <p class="tags"><span>C#</span><span>JavaScript</span><span>WebSocket</span><span>Redis</span><span>Vue</span></p>
+          <p class="tags"><span>C#</span><span>JavaScript</span><span>WebSocket</span><span>Redis</span><span>Vue.js</span></p>
           <span class="pc-more">자세히 보기 →</span>
         </button>
 
@@ -177,6 +178,61 @@
           <p class="pc-meta">졸업작품 · 클라이언트</p>
           <p class="pc-period">주신게임아카데미</p>
           <p class="tags"><span>C++</span><span>DirectX 9</span></p>
+          <span class="pc-more">자세히 보기 →</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- Personal / OSS projects — same card + modal machinery as #projects,
+         details live in the shared .proj-details container below. -->
+    <section id="oss" class="wrap section">
+      <h2>개인 프로젝트</h2>
+      <p class="section-hint">직접 만들어 GitHub에 공개한 저장소입니다. 카드를 클릭하면 상세 내역을 볼 수 있습니다.</p>
+      <div class="proj-board">
+
+        <button class="proj-card" type="button" data-detail="detail-g1" aria-haspopup="dialog">
+          <div class="pc-num">01</div>
+          <h3 class="pc-title">게임 서버 백엔드</h3>
+          <p class="pc-meta">서버 + 클라이언트 · 개인 프로젝트</p>
+          <p class="pc-period">dakgg/project</p>
+          <p class="tags"><span>C#</span><span>ASP.NET Core 9</span><span>EF Core</span><span>Blazor</span><span>Unity</span></p>
+          <span class="pc-more">자세히 보기 →</span>
+        </button>
+
+        <button class="proj-card" type="button" data-detail="detail-g2" aria-haspopup="dialog">
+          <div class="pc-num">02</div>
+          <h3 class="pc-title">ViewSystem</h3>
+          <p class="pc-meta">Unity UI 프레임워크 · UPM 패키지</p>
+          <p class="pc-period">dakgg/ui</p>
+          <p class="tags"><span>Unity</span><span>C#</span><span>uGUI</span><span>Addressables</span></p>
+          <span class="pc-more">자세히 보기 →</span>
+        </button>
+
+        <button class="proj-card" type="button" data-detail="detail-g3" aria-haspopup="dialog">
+          <div class="pc-num">03</div>
+          <h3 class="pc-title">Addressable Packer</h3>
+          <p class="pc-meta">Unity 에디터 툴 · UPM 패키지</p>
+          <p class="pc-period">dakgg/addressable-packer</p>
+          <p class="tags"><span>Unity</span><span>C#</span><span>Addressables</span><span>Editor</span></p>
+          <span class="pc-more">자세히 보기 →</span>
+        </button>
+
+        <button class="proj-card" type="button" data-detail="detail-g4" aria-haspopup="dialog">
+          <div class="pc-num">04</div>
+          <h3 class="pc-title">패치 서버 관리</h3>
+          <p class="pc-meta">앱 패치 버전 어드민 · 풀스택</p>
+          <p class="pc-period">dakgg/patch</p>
+          <p class="tags"><span>Go</span><span>Gin</span><span>GORM</span><span>React</span><span>Ant Design</span></p>
+          <span class="pc-more">자세히 보기 →</span>
+        </button>
+
+        <button class="proj-card" type="button" data-detail="detail-g5" aria-haspopup="dialog">
+          <div class="pc-num">05</div>
+          <h3 class="pc-title">게임 테이블 동기화</h3>
+          <p class="pc-meta">Google Sheets 파이프라인 · CLI</p>
+          <p class="pc-period">dakgg/go_googlesheet_sync</p>
+          <p class="tags"><span>Go</span><span>Google Sheets API</span><span>Protobuf</span></p>
           <span class="pc-more">자세히 보기 →</span>
         </button>
 
@@ -249,7 +305,7 @@
               <li>멀티 서버 인스턴스로 구성된 분산 아키텍처에서 중대형 규모 트래픽(평균 20k RPM)을 관리했습니다.</li>
               <li>데이터베이스 샤딩과 Redis 캐싱으로 대용량 데이터셋을 처리했습니다.</li>
               <li>AWS ECS로 서비스를 오케스트레이션하고 Jenkins 자동 CI/CD 파이프라인을 구축해 배포 프로세스를 간소화했습니다.</li>
-              <li>Protobuf로 통신 프로토콜을 설계하고 SQLAlchemy로 데이터 접근 레이어를 최적화했습니다.</li>
+              <li>Protobuf로 통신 프로토콜을 설계하고 SQLAlchemy로 데이터를 처리했습니다.</li>
               <li>Docker 기반 컨테이너 환경에서 Local·QA·Prod 환경을 분리해 서버를 구성했습니다.</li>
             </ul>
           </div>
@@ -358,6 +414,100 @@
         <p class="tags"><span>C++</span><span>DirectX 9</span></p>
         <div class="detail-links">
           <a href="https://youtu.be/4mXq9ICzFoQ" target="_blank" rel="noopener">▶ 플레이 영상</a>
+        </div>
+      </div>
+
+      <!-- 개인 프로젝트 (#oss) -->
+
+      <div class="proj-detail" id="detail-g1">
+        <div class="proj-num">01 — GAME SERVER</div>
+        <h3 class="detail-title">게임 서버 백엔드</h3>
+        <p class="detail-meta">개인 프로젝트 · 서버 + Unity 클라이언트</p>
+        <div class="work">
+          <ul class="work-list">
+            <li><strong>핸들러 자동 등록</strong> — 리플렉션으로 <code>*Handler</code> 클래스의 공개 메서드를 스캔해 <code>POST /{RequestType}</code> 라우트로 매핑했습니다. 새 엔드포인트는 메서드 하나를 추가하는 것으로 열립니다.</li>
+            <li><strong>트랜잭션 미들웨어</strong> — 요청 하나를 UserDb와 모든 GameDb 샤드에 걸친 트랜잭션으로 묶어, 핸들러가 커밋·롤백을 직접 다루지 않게 했습니다.</li>
+            <li><strong>GameDb 샤딩</strong> — 설정에 선언한 샤드 수만큼 DbContext를 만들고 유저 ID 기준으로 샤드를 선택하는 매니저를 두었습니다.</li>
+            <li><strong>공유 계약 레이어</strong> — 요청·응답 모델과 MessageId enum을 별도 라이브러리로 분리해 서버와 Unity 클라이언트가 같은 정의를 참조하도록 했습니다.</li>
+            <li>Blazor Server 관리자 패널과 Google Sheets를 CSV 게임 테이블로 내려받는 동기화 도구를 함께 만들었습니다.</li>
+          </ul>
+        </div>
+        <p class="tags"><span>C#</span><span>ASP.NET Core 9</span><span>EF Core</span><span>MySQL</span><span>Redis</span><span>Blazor</span><span>Unity</span></p>
+        <div class="detail-links">
+          <a href="https://github.com/dakgg/project" target="_blank" rel="noopener">↗ GitHub 저장소</a>
+        </div>
+      </div>
+
+      <div class="proj-detail" id="detail-g2">
+        <div class="proj-num">02 — VIEWSYSTEM</div>
+        <h3 class="detail-title">ViewSystem</h3>
+        <p class="detail-meta">Unity UI 프레임워크 · UPM 패키지</p>
+        <div class="work">
+          <ul class="work-list">
+            <li><strong>스택 기반 뷰 관리</strong> — ViewManager가 레이어별로 뷰를 쌓고 캔버스 sort-order 대역을 나눠 관리합니다.</li>
+            <li><strong>await 가능한 열기 API</strong> — <code>ViewRequest.Open&lt;T&gt;()</code>를 await하거나 yield할 수 있고, 제네릭 버전은 뷰가 반환한 결과를 그대로 받습니다. ModalView·PageView·CameraPageView·OverlayView 네 가지 뷰 타입을 제공합니다.</li>
+            <li><strong>마커 인터페이스 생명주기</strong> — 베이스 메서드를 오버라이드하는 대신 필요한 인터페이스만 구현해 포커스·표시·백버튼 이벤트를 선택적으로 구독하게 했습니다.</li>
+            <li><strong>포커스·입력 제어</strong> — 한 번의 갱신 패스로 포커스 뷰를 다시 계산하고, 가려진 뷰를 숨기며 레이캐스트 차단을 뷰 단위로 토글합니다.</li>
+            <li>뷰 프리팹은 타입 이름 규칙으로 Addressables에서 로드하고, 타임스케일과 무관하게 동작하는 UI 애니메이션 재생기를 붙였습니다.</li>
+          </ul>
+        </div>
+        <p class="tags"><span>Unity</span><span>C#</span><span>uGUI</span><span>Addressables</span><span>UPM</span></p>
+        <div class="detail-links">
+          <a href="https://github.com/dakgg/ui" target="_blank" rel="noopener">↗ GitHub 저장소</a>
+        </div>
+      </div>
+
+      <div class="proj-detail" id="detail-g3">
+        <div class="proj-num">03 — ADDRESSABLE PACKER</div>
+        <h3 class="detail-title">Addressable Packer</h3>
+        <p class="detail-meta">Unity Addressables 에디터 툴 · UPM 패키지</p>
+        <div class="work">
+          <ul class="work-list">
+            <li><strong>디렉토리 기반 자동 그룹핑</strong> — 그룹에 스키마를 붙이면 지정한 폴더의 내용이 곧 그룹 구성이 되어, 엔트리를 손으로 관리하지 않아도 됩니다.</li>
+            <li>중첩된 디렉토리 그룹의 우선순위를 처리하고, 스키마가 없는 수동 관리 그룹은 건드리지 않도록 했습니다.</li>
+            <li><strong>중복 의존성 해소</strong> — 여러 번들에 함께 끌려 들어간 에셋을 부모 번들 조합별로 묶어 라벨 단위로 패킹하는 Analyze 룰을 만들었습니다. 기본 룰보다 적은 수의 번들이 나옵니다.</li>
+            <li>Unity 2021.3 이상을 대상으로 UPM Git URL 설치를 지원하고 MIT 라이선스로 공개했습니다.</li>
+          </ul>
+        </div>
+        <p class="tags"><span>Unity</span><span>C#</span><span>Addressables</span><span>Editor Tool</span><span>MIT</span></p>
+        <div class="detail-links">
+          <a href="https://github.com/dakgg/addressable-packer" target="_blank" rel="noopener">↗ GitHub 저장소</a>
+        </div>
+      </div>
+
+      <div class="proj-detail" id="detail-g4">
+        <div class="proj-num">04 — PATCH ADMIN</div>
+        <h3 class="detail-title">패치 서버 관리</h3>
+        <p class="detail-meta">앱 패치 버전 어드민 · 백엔드 + 프론트엔드</p>
+        <div class="work">
+          <ul class="work-list">
+            <li>iOS·Android 앱의 패치 버전을 등록·수정·삭제하는 REST API를 Go(Gin·GORM·SQLite)로 구현했습니다.</li>
+            <li>플랫폼과 버전으로 필터링하는 조회를 지원하고, 같은 조합이 중복 등록되지 않도록 막았습니다.</li>
+            <li>정상 서비스·비활성화·점검 세 가지 상태를 두어 클라이언트 배포와 점검 전환을 관리합니다.</li>
+            <li>관리자 UI는 React(Vite·Ant Design)로 만들어 목록 조회부터 등록까지 브라우저에서 처리하게 했습니다.</li>
+          </ul>
+        </div>
+        <p class="tags"><span>Go</span><span>Gin</span><span>GORM</span><span>SQLite</span><span>React</span><span>Vite</span><span>Ant Design</span></p>
+        <div class="detail-links">
+          <a href="https://github.com/dakgg/patch" target="_blank" rel="noopener">↗ GitHub 저장소</a>
+        </div>
+      </div>
+
+      <div class="proj-detail" id="detail-g5">
+        <div class="proj-num">05 — SHEET SYNC</div>
+        <h3 class="detail-title">게임 테이블 동기화</h3>
+        <p class="detail-meta">Google Sheets 데이터 파이프라인 · CLI</p>
+        <div class="work">
+          <ul class="work-list">
+            <li>C#과 Node로 흩어져 있던 시트 동기화 스크립트를 Go 저장소 하나의 커맨드 두 개로 정리했습니다.</li>
+            <li><strong>csvsync</strong> — 스프레드시트의 모든 탭을 CSV로 내려받고, 헤더를 기준으로 주석 처리된 행과 열을 걸러냅니다.</li>
+            <li><strong>gentbl</strong> — 시트를 암호화된 Protocol Buffer 테이블로 변환해 클라이언트가 바로 읽을 수 있는 형태로 내보냅니다.</li>
+            <li>서비스 계정과 OAuth2 인증을 모두 지원하고, 기존 C# 도구가 쓰던 토큰 디렉토리 포맷을 그대로 읽도록 해 마이그레이션 없이 교체할 수 있게 했습니다.</li>
+          </ul>
+        </div>
+        <p class="tags"><span>Go</span><span>Google Sheets API</span><span>Protobuf</span><span>OAuth2</span></p>
+        <div class="detail-links">
+          <a href="https://github.com/dakgg/go_googlesheet_sync" target="_blank" rel="noopener">↗ GitHub 저장소</a>
         </div>
       </div>
 

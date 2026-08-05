@@ -32,6 +32,8 @@ The Projects section works by cloning, not by fetching or templating. Three piec
 
 Adding a project means adding both a card and a matching `.proj-detail` with an `id` equal to the card's `data-detail`. A mismatch silently does nothing — `openModal()` returns early.
 
+There are **two** `.proj-board`s — `#projects` (work projects, `detail-pN`) and `#oss` (personal GitHub repos, `detail-gN`) — but only one `.proj-details` container and one `#proj-modal`. Both boards' detail blocks live in that single container, and the wiring needs no change to add a third board: `openModal()` resolves by `getElementById` and the click handler binds every `.proj-card` in the document. Each board numbers its own cards from `01`.
+
 Ordering matters in `openModal()`: `modal.hidden` must be cleared **before** the clone is appended. An `<iframe>` inserted into a `display:none` subtree never starts loading, so injecting first leaves the YouTube embeds blank. For the same reason the detail iframes deliberately carry no `loading="lazy"` — they are already load-on-demand, since the element only exists once a card is clicked.
 
 Accessibility wiring that is easy to break when editing: the clone's `.detail-title` is assigned `id="modal-title"` at runtime to satisfy the modal's `aria-labelledby`, so every `.proj-detail` needs a `.detail-title`. The modal also scrolls-locks `document.body`, focuses `.modal-close` on open, and restores focus to the triggering card on close; anything with `data-close` inside the modal acts as a close button, and Escape closes.
